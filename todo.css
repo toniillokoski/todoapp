@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: 30px;
+    padding-bottom: 2em;
+}
+
+.todoinput {
+    padding-bottom: 2em;
+}
+
+.addbtn {
+    background: chocolate;
+    border-radius: 0.5em;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5em;
+    cursor: pointer;
+}
