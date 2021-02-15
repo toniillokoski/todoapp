@@ -13,15 +13,33 @@ body {
     text-align: center;
 }
 
+/* OTSIKKO */
 h1 {
     font-size: 30px;
-    padding-bottom: 2em;
+    padding: 2em;
 }
 
+/* KOKO TODO ALUE */
+.todocontainer {
+    border: 2px solid #ff00a6;
+    padding: 2em;
+}
+
+/* TODO LISÄYS OSIO */
 .todoinput {
     padding-bottom: 2em;
+    border: 2px solid #ff00a6;
+    display: flex;
+    flex-direction: column;
 }
 
+/* TODO LISÄYS KENTTÄ */
+#addtodo {
+    height: 2em;
+    width: 100%;
+}
+
+/* TODO LISÄYS NAPPI */
 .addbtn {
     background: chocolate;
     border-radius: 0.5em;
@@ -29,4 +47,10 @@ h1 {
     text-transform: uppercase;
     padding: 0.5em;
     cursor: pointer;
+}
+
+li {
+    width: 100%;
+    border: 2px solid #ff00a6;
+    padding: 0.5em;
 }
