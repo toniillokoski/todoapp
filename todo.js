@@ -53,9 +53,9 @@ function toUL(todos) {
     }
   
       li.innerHTML = `
-        <input type="checkbox" class="checkbox" ${checked}>
+        <input type="checkbox" class="option-input checkbox" ${checked}>
         ${item.name}
-        <button class="delete-button">X</button>
+        <button class="delete-button">✘</button>
       `;
       // finally add the <li> to the <ul>
       todoList.append(li);

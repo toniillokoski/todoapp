@@ -13,15 +13,16 @@ body {
     text-align: center;
 }
 
+
 /* OTSIKKO */
 h1 {
     font-size: 30px;
     padding: 2em;
 }
 
+
 /* KOKO TODO ALUE */
 .todocontainer {
-    border: 2px solid #ff00a6;
     padding: 2em;
 }
 
@@ -29,49 +30,127 @@ h1 {
     margin-bottom: 1em;
 }
 
+
 /* TODO LISÄYS KENTTÄ */
 .addtodo {
     width: 100%;
     padding: 0.5em;
-    border: 2px solid #ff00a6;
 }
+
 
 /* TODO LISÄYS NAPPI */
 .addbtn {
     position: relative;
-    background: rgb(233, 105, 14);
-    border-radius: 0.5em;
+    background: #cbd1d8;
     text-align: center;
     text-transform: uppercase;
     padding: 0.5em;
     cursor: pointer;
     width: 100%;
-    border: 2px solid #ff00a6;
     margin-top: 0.5em;
+    margin-bottom: 1em;
 }
+
 
 /* LISTA */
 li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
-    border: 2px solid #ff00a6;
     padding: 0.5em;
     text-transform: uppercase;
+    border: 2px solid #cbd1d8;
     margin-bottom: 0.2em;
 }
 
+
 /* TYYLIT LISTASSA KUN CHECKED*/
 .checked {
-    color: chartreuse;
-    background: crimson;
+    color: #40e0d0;
 }
 
+
+/* POISTA NAPPI */
 .delete-button {
-    background: rgb(233, 105, 14);
-    padding: 0.5em;
+    background: #cbd1d8;
+    height: 40px;
+    width: 40px;
+    content: "✘";
+    outline: none;
+    border: none;
+    z-index: 1000;
 }
 
-.checkbox {
-    font-size: 50px;
+.delete-button:hover {
+    background: #9faab7;
+}
+
+
+/* CHECKBOX */ 
+@keyframes click-wave {
+    0% {
+      height: 40px;
+      width: 40px;
+      opacity: 0.35;
+      position: relative;
+    }
+    100% {
+      height: 200px;
+      width: 200px;
+      margin-left: -80px;
+      margin-top: -80px;
+      opacity: 0;
+    }
+}
+  
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.option-input:hover {
+    background: #9faab7;
+}
+
+.option-input:checked {
+    background: #40e0d0;
+}
+
+.option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
 }
