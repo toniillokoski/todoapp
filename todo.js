@@ -25,8 +25,8 @@ function addTodo(item) {
         };
     //Sitten lisää olio luotuun taulukkoon
     todos.push(todo);
-    //Lähetä tiedot funktiolle toUL
-    toUL(todos);
+    //Lähetä tiedot funktiolle addStorage
+    addStorage(todos);
     //Tyhjennä input-laatikko
     todoInput.value = '';
     }
@@ -60,4 +60,65 @@ function toUL(todos) {
       // finally add the <li> to the <ul>
       todoList.append(li);
     });
+  }
+
+//Funktio jolla lisätä todot local storageen
+function addStorage(todos) {
+    //Muuta taulukko merkkijonoksi että sen voi asettaa local storageen
+    localStorage.setItem('todos', JSON.stringify(todos));
+    //Renderöi uudelleen näytölle
+    toUL(todos);
+}
+
+//Funktio jolla kaivetaan tallennetut tiedot local storagesta
+function getStorage() {
+    const reference = localStorage.getItem('todos');
+    //Jos reference saa tietoja
+    if (reference) {
+      //Muuta tiedot taulukoksi ja aseta ne todosiin
+      todos = JSON.parse(reference);
+      toUL(todos);
+    }
+}
+
+//Kutsu getStorage-funktiota
+getStorage();
+
+//Lisätään event listener todon checkboxiin
+todoList.addEventListener('click', function(event) {
+    //Tarkistetaan onko todo checkattu
+    if (event.target.type === 'checkbox') {
+      //Jos on, muuta tieto toggle-funktiolla
+      toggle(event.target.parentElement.getAttribute('data-key'));
+    }
+  
+    //Event listener poistonappiin
+    if (event.target.classList.contains('delete-button')) {
+      //Jos painetaan --> deleteTodo-funktio
+      deleteTodo(event.target.parentElement.getAttribute('data-key'));
+    }
+});
+
+//Toggle-funktio jolla muutetaan todon completed
+function toggle(id) {
+    todos.forEach(function(item) {
+        // Verrataan todon id:tä
+        if (item.id == id) {
+        //Muuta completed arvo
+        item.completed = !item.completed;
+      }
+    });
+
+    //Päivitä tiedot addStoragella
+    addStorage(todos);
+  }
+  
+//Poista tieto local storagesta
+  function deleteTodo(id) {
+    todos = todos.filter(function(item) {
+      return item.id != id;
+    });
+  
+    //Päivitä tiedot addStoragella
+    addStorage(todos);
   }

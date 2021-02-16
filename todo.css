@@ -25,39 +25,53 @@ h1 {
     padding: 2em;
 }
 
-/* TODO LISÄYS OSIO */
-.todoinput {
-    padding-bottom: 2em;
-    border: 2px solid #ff00a6;
-    display: flex;
-    flex-direction: column;
+.todoform {
+    margin-bottom: 1em;
 }
 
 /* TODO LISÄYS KENTTÄ */
 .addtodo {
-    height: 2em;
     width: 100%;
+    padding: 0.5em;
+    border: 2px solid #ff00a6;
 }
 
 /* TODO LISÄYS NAPPI */
 .addbtn {
-    background: chocolate;
+    position: relative;
+    background: rgb(233, 105, 14);
     border-radius: 0.5em;
     text-align: center;
     text-transform: uppercase;
     padding: 0.5em;
     cursor: pointer;
+    width: 100%;
+    border: 2px solid #ff00a6;
+    margin-top: 0.5em;
 }
 
 /* LISTA */
 li {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     border: 2px solid #ff00a6;
     padding: 0.5em;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
 }
 
 /* TYYLIT LISTASSA KUN CHECKED*/
 .checked {
     color: chartreuse;
     background: crimson;
+}
+
+.delete-button {
+    background: rgb(233, 105, 14);
+    padding: 0.5em;
+}
+
+.checkbox {
+    font-size: 50px;
 }
