@@ -34,7 +34,7 @@ h1 {
 }
 
 /* TODO LISÄYS KENTTÄ */
-#addtodo {
+.addtodo {
     height: 2em;
     width: 100%;
 }
@@ -49,8 +49,15 @@ h1 {
     cursor: pointer;
 }
 
+/* LISTA */
 li {
     width: 100%;
     border: 2px solid #ff00a6;
     padding: 0.5em;
+}
+
+/* TYYLIT LISTASSA KUN CHECKED*/
+.checked {
+    color: chartreuse;
+    background: crimson;
 }
