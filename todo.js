@@ -39,27 +39,31 @@ function toUL(todos) {
   
     //Käy läpi tiedot
     todos.forEach(function(item) {
-    //Tarkasta onko todo hoidettu
-    const checked = item.completed ? 'checked': null;
-    //Tee <li> elementti
-    const li = document.createElement('li');
-    //Anna todolle luokka
-    li.setAttribute('class', 'item');
-    //Anna todolle datakey = päivämäärä
-    li.setAttribute('data-key', item.id);
-    //Jos todo on hoidettu, anna sille class "checked", jotta tyylimääritteet muuttuu
-    if (item.completed === true) {
-    li.classList.add('checked');
-    }
-  
-      li.innerHTML = `
-        <input type="checkbox" class="option-input checkbox" ${checked}>
-        ${item.name}
-        <button class="delete-button">✘</button>
-      `;
-      // finally add the <li> to the <ul>
-      todoList.append(li);
-    });
+      //Tarkasta onko todo hoidettu
+      const checked = item.completed ? 'checked': null;
+      //Tee <li> elementti
+      const li = document.createElement('li');
+      //Anna todolle luokka
+      li.setAttribute('class', 'item');
+      //Anna todolle datakey = päivämäärä
+      li.setAttribute('data-key', item.id);
+      //Jos todo on hoidettu, anna sille class "checked", jotta tyylimääritteet muuttuu
+      if (item.completed === true) {
+        li.classList.add('checked');
+      }
+    
+        li.innerHTML = `
+          <input  type="checkbox" 
+                  class="option-input checkbox" 
+                  ${checked}>
+                  
+                  ${item.name}
+
+          <button class="delete-button">✘</button>
+        `;
+        // finally add the <li> to the <ul>
+        todoList.append(li);
+      });
   }
 
 //Funktio jolla lisätä todot local storageen
