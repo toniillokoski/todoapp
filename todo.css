@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 22px;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -223,6 +224,7 @@ body.light h1 {
 body.light .addtodo {
     background: #e7e7e7;
     border: 1px solid #1e1e1e;
+    color: #1e1e1e;
 }
 
 body.light .addbtn {
@@ -252,8 +254,4 @@ body.light .toggleText::before {
     position: relative;
     content: 'dark mode';
     white-space: nowrap;
-}
-
-body.light .delete-button:hover {
-    background: #cbcccd;
 }
