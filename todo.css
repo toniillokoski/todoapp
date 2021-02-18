@@ -40,6 +40,11 @@ header {
     padding: 0.5em;
     background: #444445;
     border: 1px solid #cc0033;
+    color: #f1f1f1;
+}
+
+.addtodo:focus {
+    outline: none;
 }
 
 
