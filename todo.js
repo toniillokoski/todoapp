@@ -53,14 +53,10 @@ function toUL(todos) {
       }
     
         li.innerHTML = `
-          
           <input  type="checkbox" 
                   class="option-input checkbox" 
                   ${checked}>
-
-                  ${item.name}
-          
-
+          ${item.name}
           <button class="delete-button">✘</button>
         `;
         // finally add the <li> to the <ul>

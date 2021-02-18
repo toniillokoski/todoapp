@@ -40,7 +40,7 @@ header {
     width: 100%;
     padding: 0.5em;
     background: #444445;
-    border: 1px solid #cc0033;
+    /* border: 1px solid #cc0033; */
     color: #f1f1f1;
 }
 
@@ -61,6 +61,7 @@ header {
     margin-top: 0.5em;
     margin-bottom: 1em;
     border: none;
+    color: #f1f1f1;
 }
 
 
