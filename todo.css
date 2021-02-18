@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 body {
@@ -11,30 +11,35 @@ body {
     align-items: center;
     flex-direction: column;
     text-align: center;
+    background: #373738;
 }
 
 
 /* OTSIKKO */
 h1 {
-    font-size: 30px;
-    padding: 2em;
+    font-size: 40px;
+    padding: 1em;
+    color: #f1f1f1;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 
 /* KOKO TODO ALUE */
 .todocontainer {
-    padding: 2em;
+    padding: 1em;
 }
-
-.todoform {
-    margin-bottom: 1em;
-}
-
 
 /* TODO LISÄYS KENTTÄ */
 .addtodo {
     width: 100%;
     padding: 0.5em;
+    background: #f1f1f1;
+
 }
 
 
@@ -61,7 +66,8 @@ li {
     padding: 0.5em;
     text-transform: uppercase;
     border: 2px solid #cbd1d8;
-    margin-bottom: 0.2em;
+    margin-bottom: 0.5em;
+    color: #f1f1f1;
 }
 
 
@@ -123,6 +129,9 @@ li {
     outline: none;
     position: relative;
     z-index: 1000;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 
 .option-input:hover {
@@ -145,12 +154,88 @@ li {
 }
 
 .option-input:checked::after {
-    -webkit-animation: click-wave 0.65s;
-    -moz-animation: click-wave 0.65s;
-    animation: click-wave 0.65s;
+    -webkit-animation: click-wave 0.35s;
+    -moz-animation: click-wave 0.35s;
+    animation: click-wave 0.35s;
     background: #40e0d0;
     content: '';
     display: block;
     position: relative;
     z-index: 100;
+}
+
+/* DARK MODE TOGGLE */
+.toggleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggleClass {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    font-size: 18px;
+    border-radius: 50%;
+    background: #d2d2d2;
+    cursor: pointer;
+    margin-top: 1em;
+    margin-right: 0.25em;
+}
+
+.toggleClass::before {
+    position: relative;
+    white-space: nowrap;
+}
+
+.toggleText {
+    position: relative;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 1em;
+    color: #fff;
+    margin-left: 0.25em;
+    text-transform: uppercase;
+}
+
+.toggleText::before {
+    position: relative;
+    content: 'Light mode';
+    white-space: nowrap;
+}
+
+/* LIGHT MODE ASETUKSET */
+body.light {
+    background: #f1f1f1;
+}
+
+body.light h1 {
+    color: #1e1e1e;
+}
+
+body.light .addtodo {
+    background: #f1f1f1;
+    border: 1px solid #1e1e1e;
+}
+
+body.light li {
+    border: 2px solid #cbd1d8;
+    color: #1e1e1e;
+}
+
+body.light .checked {
+    color: #40e0d0;
+}
+
+body.light .toggleClass {
+    background: #1e1e1e;
+}
+
+body.light .toggleText {
+    color: #1e1e1e;
+}
+body.light .toggleText::before {
+    position: relative;
+    content: 'dark mode';
+    white-space: nowrap;
 }

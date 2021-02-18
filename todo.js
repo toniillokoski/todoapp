@@ -53,11 +53,13 @@ function toUL(todos) {
       }
     
         li.innerHTML = `
+          
           <input  type="checkbox" 
                   class="option-input checkbox" 
                   ${checked}>
-                  
+
                   ${item.name}
+          
 
           <button class="delete-button">✘</button>
         `;
@@ -126,3 +128,9 @@ function toggle(id) {
     //Päivitä tiedot addStoragella
     addStorage(todos);
   }
+
+//Funktio darkmoden vaihtamiselle
+function toggleClass() {
+  const body = document.querySelector('body');
+  body.classList.toggle('light');
+}
