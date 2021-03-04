@@ -1,0 +1,311 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 22px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background: #373738;
+  /* TODO LISTA */
+}
+
+body header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* MODE TOGGLE */
+  /* OTSIKKO */
+}
+
+body header .toggleContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header .toggleContainer .toggleClass {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #909293;
+  cursor: pointer;
+  margin-top: 1em;
+  margin-right: 0.25em;
+}
+
+body header .toggleContainer .toggleClass::before {
+  position: relative;
+  white-space: nowrap;
+}
+
+body header .toggleContainer .toggleText {
+  position: relative;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 1em;
+  color: #909293;
+  margin-left: 0.25em;
+  text-transform: uppercase;
+}
+
+body header .toggleContainer .toggleText::before {
+  position: relative;
+  content: 'Light mode';
+  white-space: nowrap;
+}
+
+body header h1 {
+  font-size: 40px;
+  padding: 1em;
+  color: #f1f1f1;
+}
+
+body .todocontainer {
+  padding: 1em;
+}
+
+body .todocontainer .todoform {
+  border: none;
+  /* TODO LISÄYS KENTTÄ */
+  /* TODO LISÄYS NAPPI */
+}
+
+body .todocontainer .todoform .addtodo {
+  width: 100%;
+  padding: 0.5em;
+  background: #444445;
+  /* border: 1px solid #cc0033; */
+  color: #f1f1f1;
+}
+
+body .todocontainer .todoform .addtodo:focus {
+  outline: none;
+}
+
+body .todocontainer .todoform .addbtn {
+  position: relative;
+  background: #cc0033;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0.5em;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  border: none;
+  color: #f1f1f1;
+}
+
+body .todocontainer .todolist {
+  border: 2px solid yellow;
+  /* LISTA */
+  /* TYYLIT LISTASSA KUN CHECKED*/
+  /* POISTA NAPPI */
+  /* CHECKBOX */
+}
+
+body .todocontainer .todolist li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 0.5em;
+  text-transform: uppercase;
+  border: 2px solid #cc0033;
+  margin-bottom: 0.5em;
+  color: #f1f1f1;
+  background: #444445;
+}
+
+body .todocontainer .todolist .checked {
+  color: #cc0033;
+}
+
+body .todocontainer .todolist .delete-button {
+  background: #909293;
+  height: 40px;
+  width: 40px;
+  content: "✘";
+  outline: none;
+  border: none;
+  z-index: 1000;
+}
+
+body .todocontainer .todolist .delete-button:hover {
+  background: #9faab7;
+}
+
+@-webkit-keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+@keyframes click-wave {
+  0% {
+    height: 40px;
+    width: 40px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    height: 200px;
+    width: 200px;
+    margin-left: -80px;
+    margin-top: -80px;
+    opacity: 0;
+  }
+}
+
+body .todocontainer .todolist .option-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  -webkit-transition: all 0.15s ease-out 0s;
+  transition: all 0.15s ease-out 0s;
+  background: #909293;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 0.5rem;
+  outline: none;
+  position: relative;
+  z-index: 1000;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body .todocontainer .todolist .option-input:hover {
+  background: #9faab7;
+}
+
+body .todocontainer .todolist .option-input:checked {
+  background: #cc0033;
+}
+
+body .todocontainer .todolist .option-input:checked::before {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  content: '✔';
+  display: inline-block;
+  font-size: 26.66667px;
+  text-align: center;
+  line-height: 40px;
+}
+
+body .todocontainer .todolist .option-input:checked::after {
+  -webkit-animation: click-wave 0.35s;
+  animation: click-wave 0.35s;
+  background: #cc0033;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+}
+
+/* LIGHT MODE VÄRIT */
+body.light {
+  background: #e7e7e7;
+}
+
+body.light h1 {
+  color: #cc0033;
+}
+
+body.light .addtodo {
+  background: #e7e7e7;
+  border: 1px solid #1e1e1e;
+  color: #1e1e1e;
+}
+
+body.light .addbtn {
+  background: #cc0033;
+}
+
+body.light .addbtn:hover {
+  background: #f3003d;
+}
+
+body.light li {
+  color: #1e1e1e;
+  background: #f1f1f1;
+}
+
+body.light .checked {
+  color: #cc0033;
+}
+
+body.light .toggleClass {
+  background: #1e1e1e;
+}
+
+body.light .toggleText {
+  color: #1e1e1e;
+}
+
+body.light .toggleText::before {
+  position: relative;
+  content: 'dark mode';
+  white-space: nowrap;
+}
+/*# sourceMappingURL=main.css.map */
