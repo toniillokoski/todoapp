@@ -4,7 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 22px;
+    font-size: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -32,7 +32,7 @@ body {
                 position: relative;
                 width: 20px;
                 height: 20px;
-                font-size: 18px;
+                font-size: 16px;
                 border-radius: 50%;
                 background: #909293;
                 cursor: pointer;
@@ -47,7 +47,7 @@ body {
             
             .toggleText {
                 position: relative;
-                font-size: 18px;
+                font-size: 16px;
                 cursor: pointer;
                 margin-top: 1em;
                 color: #909293;
@@ -64,7 +64,7 @@ body {
             /* OTSIKKO */
             h1 {
                 font-size: 40px;
-                padding: 1em;
+                padding: 0.8em;
                 color: #f1f1f1;
             }
             .counter {
@@ -74,15 +74,15 @@ body {
                 align-items: center;
 
                 #total, #totaltext {
-                    font-size: 20px;
+                    font-size: 16px;
                     color: #f1f1f1;
                 }
                 #remaining, #remainingtext {
-                    font-size: 20px;
+                    font-size: 16px;
                     color: #f1f1f1;
                 }
                 #done, #donetext {
-                    font-size: 20px;
+                    font-size: 16px;
                     color: #f1f1f1;
                 }
             }
@@ -103,6 +103,7 @@ body {
                 background: #6a6b6b;
                 border: 1px solid transparent;
                 color: #f1f1f1;
+                font-size: 16px;
             }
 
             .addtodo:focus {
@@ -122,6 +123,7 @@ body {
                 margin-bottom: 1.5em;
                 border: none;
                 color: #f1f1f1;
+                font-size: 16px;
 
                 &:hover {
                     background: #f3003d;
@@ -144,11 +146,15 @@ body {
                 color: #f1f1f1;
                 background: #6a6b6b;
 
+                .itemName {
+                    font-size: 16px;                    ;
+                }
+
                 /* POISTA NAPPI */
                 .delete-button {
                     background: #444445;
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     content: "✘";
                     outline: none;
                     border: none;
@@ -164,8 +170,8 @@ body {
                 /* CHECKBOX */ 
                 @keyframes click-wave {
                     0% {
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     opacity: 0.35;
                     position: relative;
                     }
@@ -185,8 +191,8 @@ body {
                     -o-appearance: none;
                     appearance: none;
                     position: relative;
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     transition: all 0.15s ease-out 0s;
                     background: #444445;
                     border: none;
@@ -211,14 +217,14 @@ body {
                 }
 
                 .option-input:checked::before {
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     position: absolute;
                     content: '✔';
                     display: inline-block;
-                    font-size: 26.66667px;
+                    font-size: 30px * 0.66;
                     text-align: center;
-                    line-height: 40px;
+                    line-height: 30px;
                 }
 
                 .option-input:checked::after {

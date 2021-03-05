@@ -22,7 +22,7 @@ body.light {
                 position: relative;
                 width: 20px;
                 height: 20px;
-                font-size: 18px;
+                font-size: 16px;
                 border-radius: 50%;
                 background: #1e1e1e;
                 cursor: pointer;
@@ -37,7 +37,7 @@ body.light {
             
             .toggleText {
                 position: relative;
-                font-size: 18px;
+                font-size: 16px;
                 cursor: pointer;
                 margin-top: 1em;
                 color: #1e1e1e;
@@ -54,7 +54,7 @@ body.light {
             /* OTSIKKO */
             h1 {
                 font-size: 40px;
-                padding: 1em;
+                padding: 0.8em;
                 color: #cc0033;
             }
             .counter {
@@ -64,15 +64,15 @@ body.light {
                 align-items: center;
 
                 #total, #totaltext {
-                    font-size: 20px;
+                    font-size: 16px;
                     color: #1e1e1e;
                 }
                 #remaining, #remainingtext {
-                    font-size: 20px;
+                    font-size: 16px;
                     color: #1e1e1e;
                 }
                 #done, #donetext {
-                    font-size: 20px;
+                    font-size: 16px;
                     color: #1e1e1e;
                 }
             }
@@ -93,6 +93,7 @@ body.light {
                 background: #e7e7e7;
                 border: 1px solid #1e1e1e;
                 color: #1e1e1e;
+                font-size: 16px;
             }
 
             .addtodo:focus {
@@ -112,6 +113,7 @@ body.light {
                 margin-bottom: 1.5em;
                 border: none;
                 color: #f1f1f1;
+                font-size: 16px;
 
                 &:hover {
                     background: #f3003d;
@@ -134,6 +136,10 @@ body.light {
                 color: #1e1e1e;
                 background: #e7e7e7;
 
+                .itemName {
+                    font-size: 16px;
+                }
+
                 li.checked {
                     background: #e7e7e7;
                 }
@@ -141,8 +147,8 @@ body.light {
                 /* POISTA NAPPI */
                 .delete-button {
                     background: #c0c0c0;
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     content: "✘";
                     outline: none;
                     border: none;
@@ -158,8 +164,8 @@ body.light {
                 /* CHECKBOX */ 
                 @keyframes click-wave {
                     0% {
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     opacity: 0.35;
                     position: relative;
                     }
@@ -179,8 +185,8 @@ body.light {
                     -o-appearance: none;
                     appearance: none;
                     position: relative;
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     transition: all 0.15s ease-out 0s;
                     background: #c0c0c0;
                     border: none;
@@ -205,14 +211,14 @@ body.light {
                 }
 
                 .option-input:checked::before {
-                    height: 40px;
-                    width: 40px;
+                    height: 30px;
+                    width: 30px;
                     position: absolute;
                     content: '✔';
                     display: inline-block;
-                    font-size: 26.66667px;
+                    font-size: 30px * 0.66;
                     text-align: center;
-                    line-height: 40px;
+                    line-height: 30px;
                 }
 
                 .option-input:checked::after {
@@ -231,7 +237,7 @@ body.light {
 
             .checked {
                 text-transform: uppercase;
-                
+
                 .itemName {
                     color: #cc0033;
                     text-decoration: line-through;

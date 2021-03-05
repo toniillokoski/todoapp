@@ -52,7 +52,7 @@ body.light header .toggleContainer .toggleClass {
   position: relative;
   width: 20px;
   height: 20px;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 50%;
   background: #1e1e1e;
   cursor: pointer;
@@ -67,7 +67,7 @@ body.light header .toggleContainer .toggleClass::before {
 
 body.light header .toggleContainer .toggleText {
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   margin-top: 1em;
   color: #1e1e1e;
@@ -83,7 +83,7 @@ body.light header .toggleContainer .toggleText::before {
 
 body.light header h1 {
   font-size: 40px;
-  padding: 1em;
+  padding: 0.8em;
   color: #cc0033;
 }
 
@@ -101,17 +101,17 @@ body.light header .counter {
 }
 
 body.light header .counter #total, body.light header .counter #totaltext {
-  font-size: 20px;
+  font-size: 16px;
   color: #1e1e1e;
 }
 
 body.light header .counter #remaining, body.light header .counter #remainingtext {
-  font-size: 20px;
+  font-size: 16px;
   color: #1e1e1e;
 }
 
 body.light header .counter #done, body.light header .counter #donetext {
-  font-size: 20px;
+  font-size: 16px;
   color: #1e1e1e;
 }
 
@@ -131,6 +131,7 @@ body.light .todocontainer .todoform .addtodo {
   background: #e7e7e7;
   border: 1px solid #1e1e1e;
   color: #1e1e1e;
+  font-size: 16px;
 }
 
 body.light .todocontainer .todoform .addtodo:focus {
@@ -149,6 +150,7 @@ body.light .todocontainer .todoform .addbtn {
   margin-bottom: 1.5em;
   border: none;
   color: #f1f1f1;
+  font-size: 16px;
 }
 
 body.light .todocontainer .todoform .addbtn:hover {
@@ -181,14 +183,18 @@ body.light .todocontainer .todolist li, body.light .todocontainer .todolist .che
   /* CHECKBOX */
 }
 
+body.light .todocontainer .todolist li .itemName, body.light .todocontainer .todolist .checked .itemName {
+  font-size: 16px;
+}
+
 body.light .todocontainer .todolist li li.checked, body.light .todocontainer .todolist li .checked, body.light .todocontainer .todolist .checked .checked {
   background: #e7e7e7;
 }
 
 body.light .todocontainer .todolist li .delete-button, body.light .todocontainer .todolist .checked .delete-button {
   background: #c0c0c0;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   content: "✘";
   outline: none;
   border: none;
@@ -202,8 +208,8 @@ body.light .todocontainer .todolist li .delete-button:hover, body.light .todocon
 
 @-webkit-keyframes click-wave {
   0% {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     opacity: 0.35;
     position: relative;
   }
@@ -218,8 +224,8 @@ body.light .todocontainer .todolist li .delete-button:hover, body.light .todocon
 
 @keyframes click-wave {
   0% {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     opacity: 0.35;
     position: relative;
   }
@@ -239,8 +245,8 @@ body.light .todocontainer .todolist li .option-input, body.light .todocontainer 
   -o-appearance: none;
   appearance: none;
   position: relative;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
   background: #c0c0c0;
@@ -266,14 +272,14 @@ body.light .todocontainer .todolist li .option-input:checked, body.light .todoco
 }
 
 body.light .todocontainer .todolist li .option-input:checked::before, body.light .todocontainer .todolist .checked .option-input:checked::before {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   content: '✔';
   display: inline-block;
-  font-size: 26.66667px;
+  font-size: 19.8px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 body.light .todocontainer .todolist li .option-input:checked::after, body.light .todocontainer .todolist .checked .option-input:checked::after {
@@ -300,7 +306,7 @@ body.light .todocontainer .todolist .checked .itemName {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-size: 22px;
+  font-size: 20px;
   font-family: 'Poppins', sans-serif;
 }
 
@@ -357,7 +363,7 @@ body header .toggleContainer .toggleClass {
   position: relative;
   width: 20px;
   height: 20px;
-  font-size: 18px;
+  font-size: 16px;
   border-radius: 50%;
   background: #909293;
   cursor: pointer;
@@ -372,7 +378,7 @@ body header .toggleContainer .toggleClass::before {
 
 body header .toggleContainer .toggleText {
   position: relative;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
   margin-top: 1em;
   color: #909293;
@@ -388,7 +394,7 @@ body header .toggleContainer .toggleText::before {
 
 body header h1 {
   font-size: 40px;
-  padding: 1em;
+  padding: 0.8em;
   color: #f1f1f1;
 }
 
@@ -406,17 +412,17 @@ body header .counter {
 }
 
 body header .counter #total, body header .counter #totaltext {
-  font-size: 20px;
+  font-size: 16px;
   color: #f1f1f1;
 }
 
 body header .counter #remaining, body header .counter #remainingtext {
-  font-size: 20px;
+  font-size: 16px;
   color: #f1f1f1;
 }
 
 body header .counter #done, body header .counter #donetext {
-  font-size: 20px;
+  font-size: 16px;
   color: #f1f1f1;
 }
 
@@ -436,6 +442,7 @@ body .todocontainer .todoform .addtodo {
   background: #6a6b6b;
   border: 1px solid transparent;
   color: #f1f1f1;
+  font-size: 16px;
 }
 
 body .todocontainer .todoform .addtodo:focus {
@@ -454,6 +461,7 @@ body .todocontainer .todoform .addbtn {
   margin-bottom: 1.5em;
   border: none;
   color: #f1f1f1;
+  font-size: 16px;
 }
 
 body .todocontainer .todoform .addbtn:hover {
@@ -486,10 +494,14 @@ body .todocontainer .todolist li, body .todocontainer .todolist .checked {
   /* CHECKBOX */
 }
 
+body .todocontainer .todolist li .itemName, body .todocontainer .todolist .checked .itemName {
+  font-size: 16px;
+}
+
 body .todocontainer .todolist li .delete-button, body .todocontainer .todolist .checked .delete-button {
   background: #444445;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   content: "✘";
   outline: none;
   border: none;
@@ -503,8 +515,8 @@ body .todocontainer .todolist li .delete-button:hover, body .todocontainer .todo
 
 @keyframes click-wave {
   0% {
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     opacity: 0.35;
     position: relative;
   }
@@ -524,8 +536,8 @@ body .todocontainer .todolist li .option-input, body .todocontainer .todolist .c
   -o-appearance: none;
   appearance: none;
   position: relative;
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
   background: #444445;
@@ -551,14 +563,14 @@ body .todocontainer .todolist li .option-input:checked, body .todocontainer .tod
 }
 
 body .todocontainer .todolist li .option-input:checked::before, body .todocontainer .todolist .checked .option-input:checked::before {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   position: absolute;
   content: '✔';
   display: inline-block;
-  font-size: 26.66667px;
+  font-size: 19.8px;
   text-align: center;
-  line-height: 40px;
+  line-height: 30px;
 }
 
 body .todocontainer .todolist li .option-input:checked::after, body .todocontainer .todolist .checked .option-input:checked::after {
