@@ -158,12 +158,9 @@ body.light .todocontainer .todoform .addbtn:hover {
 body.light .todocontainer .todolist {
   border: none;
   /* LISTA */
-  /* TYYLIT LISTASSA KUN CHECKED*/
-  /* POISTA NAPPI */
-  /* CHECKBOX */
 }
 
-body.light .todocontainer .todolist li {
+body.light .todocontainer .todolist li, body.light .todocontainer .todolist .checked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,13 +177,15 @@ body.light .todocontainer .todolist li {
   margin-bottom: 0.5em;
   color: #1e1e1e;
   background: #e7e7e7;
+  /* POISTA NAPPI */
+  /* CHECKBOX */
 }
 
-body.light .todocontainer .todolist .checked {
-  color: #cc0033;
+body.light .todocontainer .todolist li li.checked, body.light .todocontainer .todolist li .checked, body.light .todocontainer .todolist .checked .checked {
+  background: #e7e7e7;
 }
 
-body.light .todocontainer .todolist .delete-button {
+body.light .todocontainer .todolist li .delete-button, body.light .todocontainer .todolist .checked .delete-button {
   background: #c0c0c0;
   height: 40px;
   width: 40px;
@@ -197,7 +196,7 @@ body.light .todocontainer .todolist .delete-button {
   color: #1e1e1e;
 }
 
-body.light .todocontainer .todolist .delete-button:hover {
+body.light .todocontainer .todolist li .delete-button:hover, body.light .todocontainer .todolist .checked .delete-button:hover {
   background: #9faab7;
 }
 
@@ -233,7 +232,7 @@ body.light .todocontainer .todolist .delete-button:hover {
   }
 }
 
-body.light .todocontainer .todolist .option-input {
+body.light .todocontainer .todolist li .option-input, body.light .todocontainer .todolist .checked .option-input {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -258,15 +257,15 @@ body.light .todocontainer .todolist .option-input {
   left: 0;
 }
 
-body.light .todocontainer .todolist .option-input:hover {
+body.light .todocontainer .todolist li .option-input:hover, body.light .todocontainer .todolist .checked .option-input:hover {
   background: #9faab7;
 }
 
-body.light .todocontainer .todolist .option-input:checked {
+body.light .todocontainer .todolist li .option-input:checked, body.light .todocontainer .todolist .checked .option-input:checked {
   background: #cc0033;
 }
 
-body.light .todocontainer .todolist .option-input:checked::before {
+body.light .todocontainer .todolist li .option-input:checked::before, body.light .todocontainer .todolist .checked .option-input:checked::before {
   height: 40px;
   width: 40px;
   position: absolute;
@@ -277,7 +276,7 @@ body.light .todocontainer .todolist .option-input:checked::before {
   line-height: 40px;
 }
 
-body.light .todocontainer .todolist .option-input:checked::after {
+body.light .todocontainer .todolist li .option-input:checked::after, body.light .todocontainer .todolist .checked .option-input:checked::after {
   -webkit-animation: click-wave 0.35s;
   animation: click-wave 0.35s;
   background: #cc0033;
@@ -285,6 +284,15 @@ body.light .todocontainer .todolist .option-input:checked::after {
   display: block;
   position: relative;
   z-index: 100;
+}
+
+body.light .todocontainer .todolist .checked {
+  text-transform: uppercase;
+}
+
+body.light .todocontainer .todolist .checked .itemName {
+  color: #cc0033;
+  text-decoration: line-through;
 }
 
 * {
@@ -425,7 +433,7 @@ body .todocontainer .todoform {
 body .todocontainer .todoform .addtodo {
   width: 100%;
   padding: 0.5em;
-  background: #909293;
+  background: #6a6b6b;
   border: 1px solid transparent;
   color: #f1f1f1;
 }
@@ -455,12 +463,9 @@ body .todocontainer .todoform .addbtn:hover {
 body .todocontainer .todolist {
   border: none;
   /* LISTA */
-  /* TYYLIT LISTASSA KUN CHECKED*/
-  /* POISTA NAPPI */
-  /* CHECKBOX */
 }
 
-body .todocontainer .todolist li {
+body .todocontainer .todolist li, body .todocontainer .todolist .checked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -476,14 +481,12 @@ body .todocontainer .todolist li {
   border: 1px solid transparent;
   margin-bottom: 0.5em;
   color: #f1f1f1;
-  background: #909293;
+  background: #6a6b6b;
+  /* POISTA NAPPI */
+  /* CHECKBOX */
 }
 
-body .todocontainer .todolist .checked {
-  color: #cc0033;
-}
-
-body .todocontainer .todolist .delete-button {
+body .todocontainer .todolist li .delete-button, body .todocontainer .todolist .checked .delete-button {
   background: #444445;
   height: 40px;
   width: 40px;
@@ -494,7 +497,7 @@ body .todocontainer .todolist .delete-button {
   color: #f1f1f1;
 }
 
-body .todocontainer .todolist .delete-button:hover {
+body .todocontainer .todolist li .delete-button:hover, body .todocontainer .todolist .checked .delete-button:hover {
   background: #9faab7;
 }
 
@@ -514,7 +517,7 @@ body .todocontainer .todolist .delete-button:hover {
   }
 }
 
-body .todocontainer .todolist .option-input {
+body .todocontainer .todolist li .option-input, body .todocontainer .todolist .checked .option-input {
   -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
@@ -539,15 +542,15 @@ body .todocontainer .todolist .option-input {
   left: 0;
 }
 
-body .todocontainer .todolist .option-input:hover {
+body .todocontainer .todolist li .option-input:hover, body .todocontainer .todolist .checked .option-input:hover {
   background: #9faab7;
 }
 
-body .todocontainer .todolist .option-input:checked {
+body .todocontainer .todolist li .option-input:checked, body .todocontainer .todolist .checked .option-input:checked {
   background: #cc0033;
 }
 
-body .todocontainer .todolist .option-input:checked::before {
+body .todocontainer .todolist li .option-input:checked::before, body .todocontainer .todolist .checked .option-input:checked::before {
   height: 40px;
   width: 40px;
   position: absolute;
@@ -558,7 +561,7 @@ body .todocontainer .todolist .option-input:checked::before {
   line-height: 40px;
 }
 
-body .todocontainer .todolist .option-input:checked::after {
+body .todocontainer .todolist li .option-input:checked::after, body .todocontainer .todolist .checked .option-input:checked::after {
   -webkit-animation: click-wave 0.35s;
   animation: click-wave 0.35s;
   background: #cc0033;
@@ -566,5 +569,10 @@ body .todocontainer .todolist .option-input:checked::after {
   display: block;
   position: relative;
   z-index: 100;
+}
+
+body .todocontainer .todolist .checked .itemName {
+  color: #cc0033;
+  text-decoration: line-through;
 }
 /*# sourceMappingURL=main.css.map */

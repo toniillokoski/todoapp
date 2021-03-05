@@ -56,7 +56,7 @@ function toUL(todos) {
           <input  type="checkbox" 
                   class="option-input checkbox" 
                   ${checked}>
-          ${item.name}
+          <div class="itemName">${item.name}</div>
           <button class="delete-button">✘</button>
         `;
         //Lisää

@@ -100,7 +100,7 @@ body {
             .addtodo {
                 width: 100%;
                 padding: 0.5em;
-                background: #909293;
+                background: #6a6b6b;
                 border: 1px solid transparent;
                 color: #f1f1f1;
             }
@@ -142,102 +142,104 @@ body {
                 border: 1px solid transparent;
                 margin-bottom: 0.5em;
                 color: #f1f1f1;
-                background: #909293;
+                background: #6a6b6b;
+
+                /* POISTA NAPPI */
+                .delete-button {
+                    background: #444445;
+                    height: 40px;
+                    width: 40px;
+                    content: "✘";
+                    outline: none;
+                    border: none;
+                    z-index: 1000;
+                    color: #f1f1f1;
+                }
+
+                .delete-button:hover {
+                    background: #9faab7;
+                }
+
+
+                /* CHECKBOX */ 
+                @keyframes click-wave {
+                    0% {
+                    height: 40px;
+                    width: 40px;
+                    opacity: 0.35;
+                    position: relative;
+                    }
+                    100% {
+                    height: 200px;
+                    width: 200px;
+                    margin-left: -80px;
+                    margin-top: -80px;
+                    opacity: 0;
+                    }
+                }
+                
+                .option-input {
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    -o-appearance: none;
+                    appearance: none;
+                    position: relative;
+                    height: 40px;
+                    width: 40px;
+                    transition: all 0.15s ease-out 0s;
+                    background: #444445;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                    display: inline-block;
+                    margin-right: 0.5rem;
+                    outline: none;
+                    position: relative;
+                    z-index: 1000;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                .option-input:hover {
+                    background: #9faab7;
+                }
+
+                .option-input:checked {
+                    background: #cc0033;
+                }
+
+                .option-input:checked::before {
+                    height: 40px;
+                    width: 40px;
+                    position: absolute;
+                    content: '✔';
+                    display: inline-block;
+                    font-size: 26.66667px;
+                    text-align: center;
+                    line-height: 40px;
+                }
+
+                .option-input:checked::after {
+                    -webkit-animation: click-wave 0.35s;
+                    -moz-animation: click-wave 0.35s;
+                    animation: click-wave 0.35s;
+                    background: #cc0033;
+                    content: '';
+                    display: block;
+                    position: relative;
+                    z-index: 100;
+                }
             }
 
-
-            /* TYYLIT LISTASSA KUN CHECKED*/
             .checked {
-                color: #cc0033;
-            }
+                @extend li;
 
-
-            /* POISTA NAPPI */
-            .delete-button {
-                background: #444445;
-                height: 40px;
-                width: 40px;
-                content: "✘";
-                outline: none;
-                border: none;
-                z-index: 1000;
-                color: #f1f1f1;
-            }
-
-            .delete-button:hover {
-                background: #9faab7;
-            }
-
-
-            /* CHECKBOX */ 
-            @keyframes click-wave {
-                0% {
-                height: 40px;
-                width: 40px;
-                opacity: 0.35;
-                position: relative;
+                .itemName {
+                    color: #cc0033;
+                    text-decoration: line-through;
                 }
-                100% {
-                height: 200px;
-                width: 200px;
-                margin-left: -80px;
-                margin-top: -80px;
-                opacity: 0;
-                }
-            }
-            
-            .option-input {
-                -webkit-appearance: none;
-                -moz-appearance: none;
-                -ms-appearance: none;
-                -o-appearance: none;
-                appearance: none;
-                position: relative;
-                height: 40px;
-                width: 40px;
-                transition: all 0.15s ease-out 0s;
-                background: #444445;
-                border: none;
-                color: #fff;
-                cursor: pointer;
-                display: inline-block;
-                margin-right: 0.5rem;
-                outline: none;
-                position: relative;
-                z-index: 1000;
-                right: 0;
-                bottom: 0;
-                left: 0;
-            }
-
-            .option-input:hover {
-                background: #9faab7;
-            }
-
-            .option-input:checked {
-                background: #cc0033;
-            }
-
-            .option-input:checked::before {
-                height: 40px;
-                width: 40px;
-                position: absolute;
-                content: '✔';
-                display: inline-block;
-                font-size: 26.66667px;
-                text-align: center;
-                line-height: 40px;
-            }
-
-            .option-input:checked::after {
-                -webkit-animation: click-wave 0.35s;
-                -moz-animation: click-wave 0.35s;
-                animation: click-wave 0.35s;
-                background: #cc0033;
-                content: '';
-                display: block;
-                position: relative;
-                z-index: 100;
             }
         }
     }
