@@ -102,14 +102,17 @@ body.light header .counter {
 
 body.light header .counter #total, body.light header .counter #totaltext {
   font-size: 20px;
+  color: #1e1e1e;
 }
 
 body.light header .counter #remaining, body.light header .counter #remainingtext {
   font-size: 20px;
+  color: #1e1e1e;
 }
 
 body.light header .counter #done, body.light header .counter #donetext {
   font-size: 20px;
+  color: #1e1e1e;
 }
 
 body.light .todocontainer {
@@ -143,13 +146,13 @@ body.light .todocontainer .todoform .addbtn {
   cursor: pointer;
   width: 100%;
   margin-top: 0.5em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   border: none;
   color: #f1f1f1;
 }
 
 body.light .todocontainer .todoform .addbtn:hover {
-  background: f3003d;
+  background: #f3003d;
 }
 
 body.light .todocontainer .todolist {
@@ -173,10 +176,10 @@ body.light .todocontainer .todolist li {
   width: 100%;
   padding: 0.5em;
   text-transform: uppercase;
-  border: 2px solid #cc0033;
+  border: 1px solid #cc0033;
   margin-bottom: 0.5em;
   color: #1e1e1e;
-  background: #cc0033;
+  background: #e7e7e7;
 }
 
 body.light .todocontainer .todolist .checked {
@@ -184,13 +187,14 @@ body.light .todocontainer .todolist .checked {
 }
 
 body.light .todocontainer .todolist .delete-button {
-  background: #909293;
+  background: #c0c0c0;
   height: 40px;
   width: 40px;
   content: "✘";
   outline: none;
   border: none;
   z-index: 1000;
+  color: #1e1e1e;
 }
 
 body.light .todocontainer .todolist .delete-button:hover {
@@ -240,7 +244,7 @@ body.light .todocontainer .todolist .option-input {
   width: 40px;
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  background: #909293;
+  background: #c0c0c0;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -395,14 +399,17 @@ body header .counter {
 
 body header .counter #total, body header .counter #totaltext {
   font-size: 20px;
+  color: #f1f1f1;
 }
 
 body header .counter #remaining, body header .counter #remainingtext {
   font-size: 20px;
+  color: #f1f1f1;
 }
 
 body header .counter #done, body header .counter #donetext {
   font-size: 20px;
+  color: #f1f1f1;
 }
 
 body .todocontainer {
@@ -418,8 +425,8 @@ body .todocontainer .todoform {
 body .todocontainer .todoform .addtodo {
   width: 100%;
   padding: 0.5em;
-  background: #444445;
-  /* border: 1px solid #cc0033; */
+  background: #909293;
+  border: 1px solid transparent;
   color: #f1f1f1;
 }
 
@@ -436,9 +443,13 @@ body .todocontainer .todoform .addbtn {
   cursor: pointer;
   width: 100%;
   margin-top: 0.5em;
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
   border: none;
   color: #f1f1f1;
+}
+
+body .todocontainer .todoform .addbtn:hover {
+  background: #f3003d;
 }
 
 body .todocontainer .todolist {
@@ -462,10 +473,10 @@ body .todocontainer .todolist li {
   width: 100%;
   padding: 0.5em;
   text-transform: uppercase;
-  border: 2px solid #cc0033;
+  border: 1px solid transparent;
   margin-bottom: 0.5em;
   color: #f1f1f1;
-  background: #444445;
+  background: #909293;
 }
 
 body .todocontainer .todolist .checked {
@@ -473,13 +484,14 @@ body .todocontainer .todolist .checked {
 }
 
 body .todocontainer .todolist .delete-button {
-  background: #909293;
+  background: #444445;
   height: 40px;
   width: 40px;
   content: "✘";
   outline: none;
   border: none;
   z-index: 1000;
+  color: #f1f1f1;
 }
 
 body .todocontainer .todolist .delete-button:hover {
@@ -513,7 +525,7 @@ body .todocontainer .todolist .option-input {
   width: 40px;
   -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
-  background: #909293;
+  background: #444445;
   border: none;
   color: #fff;
   cursor: pointer;

@@ -65,12 +65,15 @@ body.light {
 
                 #total, #totaltext {
                     font-size: 20px;
+                    color: #1e1e1e;
                 }
                 #remaining, #remainingtext {
                     font-size: 20px;
+                    color: #1e1e1e;
                 }
                 #done, #donetext {
                     font-size: 20px;
+                    color: #1e1e1e;
                 }
             }
         }
@@ -106,12 +109,12 @@ body.light {
                 cursor: pointer;
                 width: 100%;
                 margin-top: 0.5em;
-                margin-bottom: 1em;
+                margin-bottom: 1.5em;
                 border: none;
                 color: #f1f1f1;
 
                 &:hover {
-                    background: f3003d;
+                    background: #f3003d;
                 }
             }
         }
@@ -126,10 +129,10 @@ body.light {
                 width: 100%;
                 padding: 0.5em;
                 text-transform: uppercase;
-                border: 2px solid #cc0033;
+                border: 1px solid #cc0033;
                 margin-bottom: 0.5em;
                 color: #1e1e1e;
-                background: #cc0033;
+                background: #e7e7e7;
             }
 
 
@@ -141,13 +144,14 @@ body.light {
 
             /* POISTA NAPPI */
             .delete-button {
-                background: #909293;
+                background: #c0c0c0;
                 height: 40px;
                 width: 40px;
                 content: "✘";
                 outline: none;
                 border: none;
                 z-index: 1000;
+                color: #1e1e1e;
             }
 
             .delete-button:hover {
@@ -182,7 +186,7 @@ body.light {
                 height: 40px;
                 width: 40px;
                 transition: all 0.15s ease-out 0s;
-                background: #909293;
+                background: #c0c0c0;
                 border: none;
                 color: #fff;
                 cursor: pointer;

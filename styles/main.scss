@@ -75,12 +75,15 @@ body {
 
                 #total, #totaltext {
                     font-size: 20px;
+                    color: #f1f1f1;
                 }
                 #remaining, #remainingtext {
                     font-size: 20px;
+                    color: #f1f1f1;
                 }
                 #done, #donetext {
                     font-size: 20px;
+                    color: #f1f1f1;
                 }
             }
         }
@@ -97,8 +100,8 @@ body {
             .addtodo {
                 width: 100%;
                 padding: 0.5em;
-                background: #444445;
-                /* border: 1px solid #cc0033; */
+                background: #909293;
+                border: 1px solid transparent;
                 color: #f1f1f1;
             }
 
@@ -116,9 +119,13 @@ body {
                 cursor: pointer;
                 width: 100%;
                 margin-top: 0.5em;
-                margin-bottom: 1em;
+                margin-bottom: 1.5em;
                 border: none;
                 color: #f1f1f1;
+
+                &:hover {
+                    background: #f3003d;
+                }
             }
         }
         .todolist {
@@ -132,10 +139,10 @@ body {
                 width: 100%;
                 padding: 0.5em;
                 text-transform: uppercase;
-                border: 2px solid #cc0033;
+                border: 1px solid transparent;
                 margin-bottom: 0.5em;
                 color: #f1f1f1;
-                background: #444445;
+                background: #909293;
             }
 
 
@@ -147,13 +154,14 @@ body {
 
             /* POISTA NAPPI */
             .delete-button {
-                background: #909293;
+                background: #444445;
                 height: 40px;
                 width: 40px;
                 content: "✘";
                 outline: none;
                 border: none;
                 z-index: 1000;
+                color: #f1f1f1;
             }
 
             .delete-button:hover {
@@ -188,7 +196,7 @@ body {
                 height: 40px;
                 width: 40px;
                 transition: all 0.15s ease-out 0s;
-                background: #909293;
+                background: #444445;
                 border: none;
                 color: #fff;
                 cursor: pointer;
