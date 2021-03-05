@@ -59,10 +59,17 @@ function toUL(todos) {
           ${item.name}
           <button class="delete-button">✘</button>
         `;
-        // finally add the <li> to the <ul>
+        //Lisää
         todoList.append(li);
       });
-  }
+
+      let count1 = todos.filter(function(s) { return s.completed; }).length;
+
+      document.getElementById('total').innerHTML = todos.length;
+      document.getElementById('done').innerHTML = count1;
+      document.getElementById('remaining').innerHTML = todos.length - count1;;
+    }
+  
 
 //Funktio jolla lisätä todot local storageen
 function addStorage(todos) {
