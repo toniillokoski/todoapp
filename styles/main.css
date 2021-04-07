@@ -85,6 +85,7 @@ body.light header h1 {
   font-size: 40px;
   padding: 0.8em;
   color: #cc0033;
+  font-weight: bolder;
 }
 
 body.light header .counter {
@@ -175,7 +176,7 @@ body.light .todocontainer .todolist li, body.light .todocontainer .todolist .che
   width: 100%;
   padding: 0.5em;
   text-transform: uppercase;
-  border: 1px solid #cc0033;
+  border: 1px solid #1e1e1e;
   margin-bottom: 0.5em;
   color: #1e1e1e;
   background: #e7e7e7;
